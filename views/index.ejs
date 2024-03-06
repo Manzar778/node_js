@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dcphunz0j/image/upload/v1709377636/OlbGuCl8s81YRMV5_t0Agx_C6t2b3EFt3Ra8aX1Yb6MTwcnGU-1ZzDChSTc5ca9k_h0_se7oos.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional Styles */
+        body {
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+        }
+
+        /* Card Styles */
+        .card {
+            transition: background-color 0.3s ease;
+            height: 100%;
+        }
+
+        /* Change background color on hover */
+        .card:hover {
+            opacity: 0.9;
+        }
+
+        /* Different background colors for each card */
+        .card-shorten {
+            background-color: #89b85c; /* Green */
+        }
+
+        .card-track {
+            background-color: #5bc0de; /* Blue */
+        }
+
+        .card-secure {
+            background-color: #f0ad4e; /* Yellow */
+        }
+    </style>
+</head>
+<body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Link Shortener</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/how-to-use">How to Use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/privacy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/terms">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Hero Section -->
+    <section class="container mt-5">
+        <h1 class="text-center">Welcome to Link Shortener</h1>
+        <p class="text-center">Enter your long URL below to shorten it.</p>
+        <form action="/shorten" method="post" class="mb-3">
+            <div class="input-group">
+                <input type="url" name="originalUrl" class="form-control" placeholder="Enter your long URL here" required>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Shorten</button>
+                </div>
+            </div>
+        </form>
+        <% if (shortUrl) { %>
+            <div class="mt-3 mb-1">
+                <p>Shortened URL:</p>
+                <input type="text" class="form-control" value="<%= shortUrl %>" readonly>
+            </div>
+        <% } %>
+    </section>
+
+    <!-- Three Cards Section -->
+    <section class="container mt-4">
+        <div class="row my-4">
+            <div class="col-md-4 mb-1">
+                <div class="card card-shorten">
+                    <div class="card-body text-center">
+                        <i class="fas fa-link fa-3x"></i>
+                        <h5 class="card-title mt-2">Shorten Links</h5>
+                        <p class="card-text">Easily shorten long URLs to make them easier to share.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-1">
+                <div class="card card-track">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                        <h5 class="card-title mt-2">Track Performance</h5>
+                        <p class="card-text">Track the performance of your shortened links with detailed analytics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-1">
+                <div class="card card-secure">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h5 class="card-title mt-2">Secure Links</h5>
+                        <p class="card-text">Protect your links with security features to ensure safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Link Shortener. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Add gradient color to the navbar */
+.navbar {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+/* Style for the link shortener container */
+.container-shorten {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 80px;
+}
+
+/* Style for the form inside the link shortener container */
+.container-shorten form {
+    margin-top: 20px;
+}
+
+/* Style for the footer */
+.footer {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    padding: 15pxx 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style for the link shortener container */
+.container-shorten {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 20px;
+    width: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 250px; /* Adjust height as needed */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+/* Style for the form inside the link shortener container */
+.container-shorten form {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Style for the input inside the link shortener container */
+.container-shorten input[type="text"] {
+    width: calc(100% - 115px); /* Adjust width of input */
+    float: left;
+    margin-right: 15px;
+}
+.contact-container {
+    margin-top: 20px;
+    padding: 20px; /* Padding inside the container */
+    width: 400px; /* Set desired width */
+    height: 200px; /* Set desired height */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.contact-container h1 {
+    text-align: center; /* Center align the heading */
+}
